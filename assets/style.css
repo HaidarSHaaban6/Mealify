@@ -1,0 +1,507 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+}
+
+::selection {
+    background-color: var(--red-color);
+}
+
+:root {
+    --red-color: #ce1212;
+    --gray-color: #eeeeee;
+}
+
+.font-size {
+    font-size: 32px !important;
+    position: relative;
+}
+
+.font-size::after {
+    content: ".";
+    color: var(--red-color);
+}
+
+nav {
+    z-index: 10;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 .25rem transparent !important;
+
+}
+
+.navbar-light .navbar-toggler {
+    color: transparent;
+    border: none;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    color: gray !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: black !important;
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: var(--red-color);
+    bottom: 0;
+    left: 0;
+    transition: all .4s linear;
+}
+
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+}
+
+.first-sect {
+    min-height: 100vh;
+    background-color: var(--gray-color);
+}
+
+.padding-t-100 {
+    padding-top: 120px !important;
+}
+
+.first-sect .first-title {
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+/* .padding-t-170 p {
+    width: 500px;
+} */
+
+.main-button {
+    background-color: var(--red-color) !important;
+    width: 140px;
+    border-radius: 50px !important;
+    border-top-left-radius: 0px !important;
+}
+
+.main-button:hover {
+    background-color: red !important;
+}
+
+.a-border {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.icon-color {
+    color: black;
+}
+
+#video-icon {
+    text-decoration: none;
+    color: black;
+}
+
+#video-icon:hover {
+    color: var(--red-color);
+}
+
+.red-border {
+    border: #ce1212 7px solid;
+    border-right: 7px solid transparent;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.hero-img img {
+    animation-name: rotate;
+    animation-direction: alternate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+}
+
+.hero-img img:hover {
+    animation-play-state: running;
+}
+
+@media(max-width: 993px) {
+    .first-sect .row {
+        flex-direction: column-reverse !important;
+    }
+
+    .hero-img img {
+        width: 100% !important;
+    }
+
+    .main-button {
+        border-radius: 35px !important;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-10deg) translate(3px);
+    }
+
+    10% {
+        transform: rotate(10deg) translate(-3px);
+    }
+
+    20% {
+        transform: rotate(-10deg) translate(3px);
+    }
+
+    30% {
+        transform: rotate(10deg) translate(-3px);
+    }
+
+    40% {
+        transform: rotate(-10deg) translate(-3px);
+    }
+
+    50% {
+        transform: rotate(10deg) translate(3px);
+    }
+
+    60% {
+        transform: rotate(-10deg) translate(-3px);
+    }
+
+    70% {
+        transform: rotate(10deg) translate(3px);
+    }
+
+    80% {
+        transform: rotate(-10deg) translate(-3px);
+    }
+
+    90% {
+        transform: rotate(10deg) translate(3px);
+    }
+
+    100% {
+        transform: rotate(-10deg) translate(-3px);
+    }
+}
+
+.second-sect {
+    min-height: 100vh;
+}
+
+.second-sect .second-title,
+.third-sect .third-title,
+.fourth-sect .fourth-title {
+    font-family: "Dancing Script", cursive;
+}
+
+.adding-red-color {
+    color: var(--red-color);
+    font-family: inherit;
+}
+
+.circle-border {
+    border-radius: 10px !important;
+}
+
+.circle-border img {
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+
+.card-text {
+    font-style: italic;
+    font-size: 13px;
+}
+
+.card {
+    box-shadow: 0 5px 5px 3px gray;
+    margin-bottom: 70px;
+    overflow: hidden;
+    transition: scale .3s;
+}
+
+.card:hover {
+    box-shadow: 0 10px 10px 5px gray;
+    scale: 1.07;
+}
+
+.card:hover .icon-list {
+    right: 10px;
+}
+
+.icon-list {
+    width: fit-content;
+    background-color: var(--gray-color);
+    opacity: 0.5;
+    right: -60px;
+    top: 30px;
+    border-radius: 5px;
+    transition: all .4s .2s;
+}
+
+.icon-list a {
+    color: gray;
+}
+
+.third-sect {
+    min-height: 100vh;
+    background-color: var(--gray-color);
+}
+
+.third-sect picture {
+    overflow: hidden;
+    /* transition: all 3s; */
+    border: 5px white solid;
+}
+
+.third-sect picture img {
+    transition: all .4s;
+}
+
+.csrollind-div {
+    height: 100%;
+    bottom: -500px;
+    transition: all .4s;
+}
+
+.third-sect picture:hover .csrollind-div {
+    bottom: 0px;
+}
+
+.third-sect picture:hover img {
+    scale: 1.07;
+    filter: brightness(.5);
+}
+
+.fourth-sect {
+    min-height: 100vh;
+}
+
+.fourth-sect iframe {
+    height: 350px !important;
+}
+
+.bg-red {
+    background-color: var(--red-color);
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.bg-gray {
+    background-color: var(--gray-color);
+    height: 101px;
+}
+
+.adding-shadow {
+    box-shadow: 4px 4px 4px 4px #f7f7f7;
+}
+
+.adding-shadow input,
+.adding-shadow textarea {
+    height: 53px;
+    border: 2px solid #e8e3e3;
+}
+
+.adding-shadow textarea {
+    height: 150px !important;
+}
+
+.adding-shadow input:active,
+.adding-shadow textarea:active {
+    outline: none;
+}
+
+.adding-shadow input:focus,
+.adding-shadow textarea:focus {
+    border: 2px solid var(--red-color);
+    outline: none;
+}
+
+.adding-shadow input::placeholder,
+.adding-shadow textarea::placeholder,
+footer input::placeholder {
+    font-size: 12px;
+    padding-left: 10px;
+    color: gray;
+}
+
+.adding-shadow textarea::placeholder {
+    padding-top: 20px;
+}
+
+.submit-buttom {
+    width: 189px;
+    height: 47px;
+    background-color: var(--red-color);
+}
+
+.submit-buttom:hover {
+    background-color: red;
+}
+
+footer {
+    background-image: linear-gradient(#0009, #0009), url(./Chefs/textured-metal-background.jpg);
+    min-height: 365px;
+}
+
+.sizing-favicon {
+    width: 45px;
+}
+
+.sizing-favicon+h2 {
+    margin-bottom: 0px;
+}
+
+.sizing-favicon+h2::after {
+    content: ".";
+    color: var(--red-color);
+}
+
+.border-btm {
+    border-bottom: 2px #585858 solid;
+}
+
+.adding-font-size {
+    font-size: 15px;
+}
+
+.adding-font-size-for-icon {
+    font-size: 25px;
+}
+
+/* Large */
+@media(min-width: 1200px) {
+
+    .about,
+    .info {
+        width: 22% !important;
+    }
+
+    .search-box {
+        width: 49% !important;
+    }
+}
+
+/* Medium */
+@media(min-width: 769px) and (max-width: 1200px) {
+
+    .about,
+    .info {
+        width: 47% !important;
+    }
+
+    .search-box {
+        width: 100% !important;
+    }
+
+    .about {
+        order: 1;
+    }
+
+    .info {
+        order: 2;
+    }
+
+    .search-box {
+        order: 3;
+    }
+}
+
+/* Small */
+@media(max-width: 769px) {
+
+    .about,
+    .info {
+        width: 100% !important;
+    }
+
+    .search-box {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 576px) {
+    .adding-width {
+        width: 100% !important;
+    }
+
+    .button-width {
+        width: 100% !important;
+        margin-top: 10px;
+    }
+}
+
+/* 576px
+   768px
+   992px
+   */
+
+.adding-height {
+    height: 41px;
+}
+
+/* .font-sizing {
+    font-size: 13px;
+} */
+
+.adding-width {
+    width: calc(98% - 110px);
+}
+
+.button-width {
+    width: 110px;
+    background-color: var(--red-color);
+    border: none;
+}
+
+.adding-height-for-list {
+    height: 95px;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-list a:hover {
+    color: white;
+}
+
+.footer-list li {
+    overflow: hidden;
+    margin: 2px;
+    transition: all .2s linear;
+}
+
+.footer-list li::before {
+    content: "\f105";
+    font: var(--fa-font-solid);
+    margin-right: 5px;
+    color: white;
+}
+
+.footer-list li:hover {
+    transform: translate(5px);
+    background-color: gray;
+}
+
+.info-icon-list a {
+    text-decoration: none;
+    color: white !important;
+}
+
+.info-icon-list a i {
+    color: var(--red-color);
+}
